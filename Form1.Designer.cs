@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1_Table = new System.Windows.Forms.DataGridView();
             this.button_AddOrder = new System.Windows.Forms.Button();
             this.Column_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,7 +38,9 @@
             this.Column_Service = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stats = new System.Windows.Forms.Button();
+            this.button_Stats = new System.Windows.Forms.Button();
+            this.toolTip_Order = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip_Stats = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,21 +125,22 @@
             this.Column_date.ReadOnly = true;
             this.Column_date.ToolTipText = "When the job is done";
             // 
-            // Stats
+            // button_Stats
             // 
-            this.Stats.Location = new System.Drawing.Point(119, 379);
-            this.Stats.Name = "Stats";
-            this.Stats.Size = new System.Drawing.Size(75, 23);
-            this.Stats.TabIndex = 2;
-            this.Stats.Text = "button_Stats";
-            this.Stats.UseVisualStyleBackColor = true;
+            this.button_Stats.Location = new System.Drawing.Point(119, 379);
+            this.button_Stats.Name = "button_Stats";
+            this.button_Stats.Size = new System.Drawing.Size(75, 23);
+            this.button_Stats.TabIndex = 2;
+            this.button_Stats.Text = "Stats";
+            this.button_Stats.UseVisualStyleBackColor = true;
+            this.button_Stats.Click += new System.EventHandler(this.Button_Stats_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 455);
-            this.Controls.Add(this.Stats);
+            this.Controls.Add(this.button_Stats);
             this.Controls.Add(this.button_AddOrder);
             this.Controls.Add(this.dataGridView1_Table);
             this.Name = "Form1";
@@ -158,7 +162,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Service;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_date;
-        private System.Windows.Forms.Button Stats;
+        private System.Windows.Forms.Button button_Stats;
+        private System.Windows.Forms.ToolTip toolTip_Order;
+        private System.Windows.Forms.ToolTip toolTip_Stats;
     }
 }
 

@@ -1,6 +1,6 @@
 ﻿namespace Tyuiu.BelykhD.Task1.V0
 {
-    partial class Form2
+    partial class Order
     {
         /// <summary>
         /// Required designer variable.
@@ -164,7 +164,7 @@
             this.button_CreateOrder.UseVisualStyleBackColor = true;
             this.button_CreateOrder.Click += new System.EventHandler(this.Button_CreateOrder_Click);
             // 
-            // Form2
+            // Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -182,8 +182,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "Order";
+            this.Text = "Order";
             this.ResumeLayout(false);
             this.PerformLayout();
 

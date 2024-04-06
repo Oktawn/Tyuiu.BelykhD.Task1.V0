@@ -14,6 +14,8 @@ namespace Tyuiu.BelykhD.Task1.V0
         {
             InitializeComponent();
             LoadCSV(pathDB);
+            toolTip_Order.SetToolTip(button_AddOrder, "Add order");
+            toolTip_Stats.SetToolTip(button_Stats, "show stats");
         }
 
 
@@ -58,9 +60,14 @@ namespace Tyuiu.BelykhD.Task1.V0
 
         private void Button_AddOrder_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2(dataGridView1_Table: dataGridView1_Table);
+            Order form2 = new Order(dataGridView1_Table: dataGridView1_Table);
             form2.Show();
         }
 
+        private void Button_Stats_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3(dataGridView1_Table: dataGridView1_Table);
+            form3.Show();
+        }
     }
 }

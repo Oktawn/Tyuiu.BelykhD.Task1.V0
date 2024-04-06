@@ -3,17 +3,17 @@ using System.Windows.Forms;
 
 namespace Tyuiu.BelykhD.Task1.V0
 {
-    public partial class Form2 : Form
+    public partial class Order : Form
     {
         private DataGridView dataGridView1_Table;
 
-        public Form2()
+        public Order()
         {
             InitializeComponent();
         }
 
 
-        public Form2(DataGridView dataGridView1_Table)
+        public Order(DataGridView dataGridView1_Table)
         {
             InitializeComponent();
             this.dataGridView1_Table = dataGridView1_Table;
