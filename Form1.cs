@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -10,6 +9,7 @@ namespace Tyuiu.BelykhD.Task1.V0
     public partial class Form1 : Form
     {
         readonly string pathDB = "DB.csv";
+
         public Form1()
         {
             InitializeComponent();
@@ -55,5 +55,12 @@ namespace Tyuiu.BelykhD.Task1.V0
                 SaveCSV();
             }
         }
+
+        private void Button_AddOrder_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2(dataGridView1_Table: dataGridView1_Table);
+            form2.Show();
+        }
+
     }
 }
