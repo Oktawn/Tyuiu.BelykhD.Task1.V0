@@ -28,143 +28,107 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.dataGridView1_Table = new System.Windows.Forms.DataGridView();
-            this.button_AddOrder = new System.Windows.Forms.Button();
-            this.Column_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_car = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Master = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Service = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_Stats = new System.Windows.Forms.Button();
-            this.toolTip_Order = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTip_Stats = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_Table)).BeginInit();
+            this.label_login = new System.Windows.Forms.Label();
+            this.label_pass = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.linkLabel_SignUp = new System.Windows.Forms.LinkLabel();
+            this.button_SignIn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1_Table
+            // label_login
             // 
-            this.dataGridView1_Table.AllowUserToAddRows = false;
-            this.dataGridView1_Table.AllowUserToDeleteRows = false;
-            this.dataGridView1_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column_id,
-            this.Column_car,
-            this.Column_Phone,
-            this.Column_Master,
-            this.Column_Service,
-            this.Column_Price,
-            this.Column_date});
-            this.dataGridView1_Table.Location = new System.Drawing.Point(12, 43);
-            this.dataGridView1_Table.Name = "dataGridView1_Table";
-            this.dataGridView1_Table.ReadOnly = true;
-            this.dataGridView1_Table.Size = new System.Drawing.Size(773, 278);
-            this.dataGridView1_Table.TabIndex = 0;
+            this.label_login.AutoSize = true;
+            this.label_login.Location = new System.Drawing.Point(25, 103);
+            this.label_login.Name = "label_login";
+            this.label_login.Size = new System.Drawing.Size(33, 13);
+            this.label_login.TabIndex = 0;
+            this.label_login.Text = "Login";
             // 
-            // button_AddOrder
+            // label_pass
             // 
-            this.button_AddOrder.Location = new System.Drawing.Point(12, 379);
-            this.button_AddOrder.Name = "button_AddOrder";
-            this.button_AddOrder.Size = new System.Drawing.Size(75, 23);
-            this.button_AddOrder.TabIndex = 1;
-            this.button_AddOrder.Text = "Add order";
-            this.button_AddOrder.UseVisualStyleBackColor = true;
-            this.button_AddOrder.Click += new System.EventHandler(this.Button_AddOrder_Click);
+            this.label_pass.AutoSize = true;
+            this.label_pass.Location = new System.Drawing.Point(25, 177);
+            this.label_pass.Name = "label_pass";
+            this.label_pass.Size = new System.Drawing.Size(53, 13);
+            this.label_pass.TabIndex = 1;
+            this.label_pass.Text = "Password";
             // 
-            // Column_id
+            // textBox1
             // 
-            this.Column_id.HeaderText = "id";
-            this.Column_id.MaxInputLength = 20;
-            this.Column_id.Name = "Column_id";
-            this.Column_id.ReadOnly = true;
-            this.Column_id.ToolTipText = "Nubmer service";
+            this.textBox1.Location = new System.Drawing.Point(127, 103);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 2;
             // 
-            // Column_car
+            // textBox2
             // 
-            this.Column_car.HeaderText = "№ car";
-            this.Column_car.MaxInputLength = 9;
-            this.Column_car.Name = "Column_car";
-            this.Column_car.ReadOnly = true;
-            this.Column_car.ToolTipText = "number car";
+            this.textBox2.Location = new System.Drawing.Point(127, 174);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 3;
             // 
-            // Column_Phone
+            // linkLabel_SignUp
             // 
-            this.Column_Phone.HeaderText = "Phone";
-            this.Column_Phone.MaxInputLength = 12;
-            this.Column_Phone.Name = "Column_Phone";
-            this.Column_Phone.ReadOnly = true;
-            this.Column_Phone.ToolTipText = "Owner\'s phone number";
+            this.linkLabel_SignUp.AutoSize = true;
+            this.linkLabel_SignUp.Location = new System.Drawing.Point(23, 307);
+            this.linkLabel_SignUp.Name = "linkLabel_SignUp";
+            this.linkLabel_SignUp.Size = new System.Drawing.Size(43, 13);
+            this.linkLabel_SignUp.TabIndex = 4;
+            this.linkLabel_SignUp.TabStop = true;
+            this.linkLabel_SignUp.Text = "Sign up";
             // 
-            // Column_Master
+            // button_SignIn
             // 
-            this.Column_Master.HeaderText = "Master";
-            this.Column_Master.MaxInputLength = 40;
-            this.Column_Master.Name = "Column_Master";
-            this.Column_Master.ReadOnly = true;
-            this.Column_Master.ToolTipText = "FIO Master";
+            this.button_SignIn.Location = new System.Drawing.Point(127, 264);
+            this.button_SignIn.Name = "button_SignIn";
+            this.button_SignIn.Size = new System.Drawing.Size(75, 23);
+            this.button_SignIn.TabIndex = 5;
+            this.button_SignIn.Text = "Sign In";
+            this.button_SignIn.UseVisualStyleBackColor = true;
+            this.button_SignIn.Click += new System.EventHandler(this.Button_SignIn_Click);
             // 
-            // Column_Service
+            // pictureBox1
             // 
-            this.Column_Service.HeaderText = "Service";
-            this.Column_Service.Name = "Column_Service";
-            this.Column_Service.ReadOnly = true;
-            // 
-            // Column_Price
-            // 
-            this.Column_Price.HeaderText = "Price";
-            this.Column_Price.Name = "Column_Price";
-            this.Column_Price.ReadOnly = true;
-            this.Column_Price.ToolTipText = "Cost service";
-            // 
-            // Column_date
-            // 
-            this.Column_date.HeaderText = "Date Complite";
-            this.Column_date.Name = "Column_date";
-            this.Column_date.ReadOnly = true;
-            this.Column_date.ToolTipText = "When the job is done";
-            // 
-            // button_Stats
-            // 
-            this.button_Stats.Location = new System.Drawing.Point(119, 379);
-            this.button_Stats.Name = "button_Stats";
-            this.button_Stats.Size = new System.Drawing.Size(75, 23);
-            this.button_Stats.TabIndex = 2;
-            this.button_Stats.Text = "Stats";
-            this.button_Stats.UseVisualStyleBackColor = true;
-            this.button_Stats.Click += new System.EventHandler(this.Button_Stats_Click);
+            this.pictureBox1.Image = global::Tyuiu.BelykhD.Task1.V0.Properties.Resources.museum;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 455);
-            this.Controls.Add(this.button_Stats);
-            this.Controls.Add(this.button_AddOrder);
-            this.Controls.Add(this.dataGridView1_Table);
+            this.ClientSize = new System.Drawing.Size(352, 455);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button_SignIn);
+            this.Controls.Add(this.linkLabel_SignUp);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label_pass);
+            this.Controls.Add(this.label_login);
             this.Name = "Form1";
-            this.Text = "Main Menu";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_Table)).EndInit();
+            this.Text = "Authorization";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1_Table;
-        private System.Windows.Forms.Button button_AddOrder;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_car;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Master;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Service;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_date;
-        private System.Windows.Forms.Button button_Stats;
-        private System.Windows.Forms.ToolTip toolTip_Order;
-        private System.Windows.Forms.ToolTip toolTip_Stats;
+        private System.Windows.Forms.Label label_login;
+        private System.Windows.Forms.Label label_pass;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.LinkLabel linkLabel_SignUp;
+        private System.Windows.Forms.Button button_SignIn;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
