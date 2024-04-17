@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tyuiu.BelykhD.Task1.V0
@@ -45,6 +38,8 @@ namespace Tyuiu.BelykhD.Task1.V0
             textBox_Revenue.Text = sum.ToString();
             textBox_mnCost.Text = min.ToString();
             textBox_mxCost.Text = max.ToString();
+            textBox_avg.Text = (sum / dataGridView1_Table.Rows.Count).ToString();
+            textBox_count.Text=dataGridView1_Table.Rows.Count.ToString();
         }
 
     }

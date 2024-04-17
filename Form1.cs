@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -68,6 +69,20 @@ namespace Tyuiu.BelykhD.Task1.V0
         {
             Form3 form3 = new Form3(dataGridView1_Table: dataGridView1_Table);
             form3.Show();
+        }
+
+        private void ToolStripTextBox_Programm_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4();
+            form4.Show();
+        }
+
+        private void toolStripTextBox2_Click(object sender, EventArgs e)
+        {
+           Process process = new Process();
+            process.StartInfo.FileName = "text.docx";
+            process.Start();
+
         }
     }
 }
