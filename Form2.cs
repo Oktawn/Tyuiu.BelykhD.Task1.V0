@@ -1,23 +1,22 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace Tyuiu.BelykhD.Task1.V0
 {
     public partial class Order : Form
     {
-        private DataGridView dataGridView1_Table;
 
-        public Order()
+        private DataTable dt;
+
+
+        public Order(System.Data.DataTable DataTable)
         {
             InitializeComponent();
+            this.dt = DataTable;
         }
 
 
-        public Order(DataGridView dataGridView1_Table)
-        {
-            InitializeComponent();
-            this.dataGridView1_Table = dataGridView1_Table;
-        }
 
         private void TextBox_Cost_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -27,7 +26,7 @@ namespace Tyuiu.BelykhD.Task1.V0
         private void Button_CreateOrder_Click(object sender, EventArgs e)
         {
 
-            int id = dataGridView1_Table.Rows.Count + 1;
+            int id = dt.Rows.Count + 1;
             string car = maskedTextBox_Car.Text.Replace(' ', '_');
             string pnone = maskedTextBox_Phone.Text;
             string master = comboBox_Master.Text;
@@ -43,7 +42,7 @@ namespace Tyuiu.BelykhD.Task1.V0
                     return;
                 }
             }
-            dataGridView1_Table.Rows.Add(order);
+            dt.Rows.Add(order);
 
 
         }

@@ -30,13 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1_Table = new System.Windows.Forms.DataGridView();
-            this.Column_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_car = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Master = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Service = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_AddOrder = new System.Windows.Forms.Button();
             this.button_Stats = new System.Windows.Forms.Button();
             this.toolTip_Order = new System.Windows.Forms.ToolTip(this.components);
@@ -45,6 +38,12 @@
             this.свойстваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox_Programm = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox_guide = new System.Windows.Forms.ToolStripMenuItem();
+            this.label_SearchCar = new System.Windows.Forms.Label();
+            this.textBox_SearchCar = new System.Windows.Forms.TextBox();
+            this.comboBox_Filter = new System.Windows.Forms.ComboBox();
+            this.textBox_Filter = new System.Windows.Forms.TextBox();
+            this.button_Filter = new System.Windows.Forms.Button();
+            this.button_Clear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_Table)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -54,71 +53,10 @@
             this.dataGridView1_Table.AllowUserToAddRows = false;
             this.dataGridView1_Table.AllowUserToDeleteRows = false;
             this.dataGridView1_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column_id,
-            this.Column_car,
-            this.Column_Phone,
-            this.Column_Master,
-            this.Column_Service,
-            this.Column_Price,
-            this.Column_date});
             this.dataGridView1_Table.Location = new System.Drawing.Point(12, 43);
             this.dataGridView1_Table.Name = "dataGridView1_Table";
-            this.dataGridView1_Table.ReadOnly = true;
             this.dataGridView1_Table.Size = new System.Drawing.Size(773, 278);
             this.dataGridView1_Table.TabIndex = 0;
-            // 
-            // Column_id
-            // 
-            this.Column_id.HeaderText = "id";
-            this.Column_id.MaxInputLength = 20;
-            this.Column_id.Name = "Column_id";
-            this.Column_id.ReadOnly = true;
-            this.Column_id.ToolTipText = "Nubmer service";
-            // 
-            // Column_car
-            // 
-            this.Column_car.HeaderText = "№ car";
-            this.Column_car.MaxInputLength = 9;
-            this.Column_car.Name = "Column_car";
-            this.Column_car.ReadOnly = true;
-            this.Column_car.ToolTipText = "number car";
-            // 
-            // Column_Phone
-            // 
-            this.Column_Phone.HeaderText = "Phone";
-            this.Column_Phone.MaxInputLength = 12;
-            this.Column_Phone.Name = "Column_Phone";
-            this.Column_Phone.ReadOnly = true;
-            this.Column_Phone.ToolTipText = "Owner\'s phone number";
-            // 
-            // Column_Master
-            // 
-            this.Column_Master.HeaderText = "Master";
-            this.Column_Master.MaxInputLength = 40;
-            this.Column_Master.Name = "Column_Master";
-            this.Column_Master.ReadOnly = true;
-            this.Column_Master.ToolTipText = "FIO Master";
-            // 
-            // Column_Service
-            // 
-            this.Column_Service.HeaderText = "Service";
-            this.Column_Service.Name = "Column_Service";
-            this.Column_Service.ReadOnly = true;
-            // 
-            // Column_Price
-            // 
-            this.Column_Price.HeaderText = "Price";
-            this.Column_Price.Name = "Column_Price";
-            this.Column_Price.ReadOnly = true;
-            this.Column_Price.ToolTipText = "Cost service";
-            // 
-            // Column_date
-            // 
-            this.Column_date.HeaderText = "Date Complite";
-            this.Column_date.Name = "Column_date";
-            this.Column_date.ReadOnly = true;
-            this.Column_date.ToolTipText = "When the job is done";
             // 
             // button_AddOrder
             // 
@@ -132,7 +70,7 @@
             // 
             // button_Stats
             // 
-            this.button_Stats.Location = new System.Drawing.Point(119, 379);
+            this.button_Stats.Location = new System.Drawing.Point(107, 379);
             this.button_Stats.Name = "button_Stats";
             this.button_Stats.Size = new System.Drawing.Size(75, 23);
             this.button_Stats.TabIndex = 2;
@@ -172,13 +110,75 @@
             this.toolStripTextBox_guide.Overflow = System.Windows.Forms.ToolStripItemOverflow.Always;
             this.toolStripTextBox_guide.Size = new System.Drawing.Size(221, 22);
             this.toolStripTextBox_guide.Text = "Руководтсво пользователя";
-            this.toolStripTextBox_guide.Click += new System.EventHandler(this.toolStripTextBox2_Click);
+            this.toolStripTextBox_guide.Click += new System.EventHandler(this.ToolStripTextBox2_Click);
+            // 
+            // label_SearchCar
+            // 
+            this.label_SearchCar.AutoSize = true;
+            this.label_SearchCar.Location = new System.Drawing.Point(616, 384);
+            this.label_SearchCar.Name = "label_SearchCar";
+            this.label_SearchCar.Size = new System.Drawing.Size(73, 13);
+            this.label_SearchCar.TabIndex = 6;
+            this.label_SearchCar.Text = "Search by car";
+            // 
+            // textBox_SearchCar
+            // 
+            this.textBox_SearchCar.Location = new System.Drawing.Point(702, 381);
+            this.textBox_SearchCar.Name = "textBox_SearchCar";
+            this.textBox_SearchCar.Size = new System.Drawing.Size(100, 20);
+            this.textBox_SearchCar.TabIndex = 7;
+            this.textBox_SearchCar.TextChanged += new System.EventHandler(this.TextBox_SearchCar_TextChanged);
+            // 
+            // comboBox_Filter
+            // 
+            this.comboBox_Filter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Filter.FormattingEnabled = true;
+            this.comboBox_Filter.Items.AddRange(new object[] {
+            "Date Complite",
+            "Master"});
+            this.comboBox_Filter.Location = new System.Drawing.Point(270, 379);
+            this.comboBox_Filter.Name = "comboBox_Filter";
+            this.comboBox_Filter.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Filter.TabIndex = 8;
+            // 
+            // textBox_Filter
+            // 
+            this.textBox_Filter.Location = new System.Drawing.Point(450, 381);
+            this.textBox_Filter.Name = "textBox_Filter";
+            this.textBox_Filter.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Filter.TabIndex = 10;
+            // 
+            // button_Filter
+            // 
+            this.button_Filter.Location = new System.Drawing.Point(270, 420);
+            this.button_Filter.Name = "button_Filter";
+            this.button_Filter.Size = new System.Drawing.Size(75, 23);
+            this.button_Filter.TabIndex = 11;
+            this.button_Filter.Text = "Click";
+            this.button_Filter.UseVisualStyleBackColor = true;
+            this.button_Filter.Click += new System.EventHandler(this.Button_Filter_Click);
+            // 
+            // button_Clear
+            // 
+            this.button_Clear.Location = new System.Drawing.Point(475, 420);
+            this.button_Clear.Name = "button_Clear";
+            this.button_Clear.Size = new System.Drawing.Size(75, 23);
+            this.button_Clear.TabIndex = 12;
+            this.button_Clear.Text = "Clear";
+            this.button_Clear.UseVisualStyleBackColor = true;
+            this.button_Clear.Click += new System.EventHandler(this.Button_Clear_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 455);
+            this.Controls.Add(this.button_Clear);
+            this.Controls.Add(this.button_Filter);
+            this.Controls.Add(this.textBox_Filter);
+            this.Controls.Add(this.comboBox_Filter);
+            this.Controls.Add(this.textBox_SearchCar);
+            this.Controls.Add(this.label_SearchCar);
             this.Controls.Add(this.button_Stats);
             this.Controls.Add(this.button_AddOrder);
             this.Controls.Add(this.dataGridView1_Table);
@@ -200,13 +200,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1_Table;
         private System.Windows.Forms.Button button_AddOrder;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_car;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Master;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Service;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_date;
         private System.Windows.Forms.Button button_Stats;
         private System.Windows.Forms.ToolTip toolTip_Order;
         private System.Windows.Forms.ToolTip toolTip_Stats;
@@ -214,6 +207,12 @@
         private System.Windows.Forms.ToolStripMenuItem свойстваToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripTextBox_Programm;
         private System.Windows.Forms.ToolStripMenuItem toolStripTextBox_guide;
+        private System.Windows.Forms.Label label_SearchCar;
+        private System.Windows.Forms.TextBox textBox_SearchCar;
+        private System.Windows.Forms.ComboBox comboBox_Filter;
+        private System.Windows.Forms.TextBox textBox_Filter;
+        private System.Windows.Forms.Button button_Filter;
+        private System.Windows.Forms.Button button_Clear;
     }
 }
 
