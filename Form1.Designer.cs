@@ -1,6 +1,6 @@
 ﻿namespace Tyuiu.BelykhD.Task1.V0
 {
-    partial class Form1
+    partial class Authorization
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -30,11 +30,10 @@
         {
             this.label_login = new System.Windows.Forms.Label();
             this.label_pass = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.linkLabel_SignUp = new System.Windows.Forms.LinkLabel();
+            this.textBox_login = new System.Windows.Forms.TextBox();
             this.button_SignIn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.maskedTextBox_pass = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,36 +55,19 @@
             this.label_pass.TabIndex = 1;
             this.label_pass.Text = "Password";
             // 
-            // textBox1
+            // textBox_login
             // 
-            this.textBox1.Location = new System.Drawing.Point(127, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(127, 174);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
-            // 
-            // linkLabel_SignUp
-            // 
-            this.linkLabel_SignUp.AutoSize = true;
-            this.linkLabel_SignUp.Location = new System.Drawing.Point(23, 307);
-            this.linkLabel_SignUp.Name = "linkLabel_SignUp";
-            this.linkLabel_SignUp.Size = new System.Drawing.Size(43, 13);
-            this.linkLabel_SignUp.TabIndex = 4;
-            this.linkLabel_SignUp.TabStop = true;
-            this.linkLabel_SignUp.Text = "Sign up";
+            this.textBox_login.Location = new System.Drawing.Point(127, 103);
+            this.textBox_login.Name = "textBox_login";
+            this.textBox_login.Size = new System.Drawing.Size(100, 20);
+            this.textBox_login.TabIndex = 2;
             // 
             // button_SignIn
             // 
-            this.button_SignIn.Location = new System.Drawing.Point(127, 264);
+            this.button_SignIn.Location = new System.Drawing.Point(136, 253);
             this.button_SignIn.Name = "button_SignIn";
             this.button_SignIn.Size = new System.Drawing.Size(75, 23);
-            this.button_SignIn.TabIndex = 5;
+            this.button_SignIn.TabIndex = 4;
             this.button_SignIn.Text = "Sign In";
             this.button_SignIn.UseVisualStyleBackColor = true;
             this.button_SignIn.Click += new System.EventHandler(this.Button_SignIn_Click);
@@ -93,27 +75,37 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Tyuiu.BelykhD.Task1.V0.Properties.Resources.museum;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(127, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // maskedTextBox_pass
+            // 
+            this.maskedTextBox_pass.Location = new System.Drawing.Point(127, 174);
+            this.maskedTextBox_pass.Name = "maskedTextBox_pass";
+            this.maskedTextBox_pass.PasswordChar = '*';
+            this.maskedTextBox_pass.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox_pass.TabIndex = 3;
+            // 
+            // Authorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 455);
+            this.ClientSize = new System.Drawing.Size(334, 378);
+            this.Controls.Add(this.maskedTextBox_pass);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_SignIn);
-            this.Controls.Add(this.linkLabel_SignUp);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_login);
             this.Controls.Add(this.label_pass);
             this.Controls.Add(this.label_login);
-            this.Name = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "Authorization";
             this.Text = "Authorization";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Authorization_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -124,11 +116,10 @@
 
         private System.Windows.Forms.Label label_login;
         private System.Windows.Forms.Label label_pass;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.LinkLabel linkLabel_SignUp;
+        private System.Windows.Forms.TextBox textBox_login;
         private System.Windows.Forms.Button button_SignIn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox_pass;
     }
 }
 
