@@ -137,7 +137,7 @@
             this.textBox_Cost.Name = "textBox_Cost";
             this.textBox_Cost.Size = new System.Drawing.Size(100, 20);
             this.textBox_Cost.TabIndex = 19;
-            this.textBox_Cost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_Cost_KeyPress);
+            this.textBox_Cost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_Cost_KeyPress_BelykhDM);
             // 
             // comboBox_Master
             // 
@@ -162,7 +162,7 @@
             this.button_CreateOrder.TabIndex = 21;
             this.button_CreateOrder.Text = "Create Order";
             this.button_CreateOrder.UseVisualStyleBackColor = true;
-            this.button_CreateOrder.Click += new System.EventHandler(this.Button_CreateOrder_Click);
+            this.button_CreateOrder.Click += new System.EventHandler(this.Button_CreateOrder_Click_BelykhDM);
             // 
             // Order
             // 

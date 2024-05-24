@@ -8,21 +8,21 @@ using System.Windows.Forms;
 
 namespace Tyuiu.BelykhD.Task1.V0
 {
-    public partial class Form1 : Form
+    public partial class FormMain_BelykhDM : Form
     {
         readonly string pathDB = "DB.csv";
         private readonly DataTable dt = new DataTable();
 
-        public Form1()
+        public FormMain_BelykhDM()
         {
             InitializeComponent();
-            LoadCSV(pathDB);
+            LoadCSV_BelykhDM(pathDB);
             toolTip_Order.SetToolTip(button_AddOrder, "Add order");
             toolTip_Stats.SetToolTip(button_Stats, "show stats");
         }
 
 
-        private void LoadCSV(string pathDB)
+        private void LoadCSV_BelykhDM(string pathDB)
         {
             foreach (var item in File.ReadLines(pathDB).ElementAtOrDefault(0).Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries))
             {
@@ -38,7 +38,7 @@ namespace Tyuiu.BelykhD.Task1.V0
             dataGridView1_Table.DataSource = dt;
 
         }
-        private void SaveCSV()
+        private void SaveCSV_BelykhDM()
         {
             StringBuilder csv = new StringBuilder();
 
@@ -60,34 +60,34 @@ namespace Tyuiu.BelykhD.Task1.V0
             File.WriteAllText(pathDB, csv.ToString());
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        private void Form1_FormClosing_BelykhDM(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Хотите сохранить данные перед закрытием?", "Сохранение данных", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                SaveCSV();
+                SaveCSV_BelykhDM();
             }
         }
 
-        private void Button_AddOrder_Click(object sender, EventArgs e)
+        private void Button_AddOrder_Click_BelykhDM(object sender, EventArgs e)
         {
             Order form2 = new Order(DataTable: dt);
             form2.Show();
         }
 
-        private void Button_Stats_Click(object sender, EventArgs e)
+        private void Button_Stats_Click_BelykhDM(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3(dataGridView1_Table: dataGridView1_Table);
+            FormStats_BelykhDM form3 = new FormStats_BelykhDM(dataGridView1_Table: dataGridView1_Table);
             form3.Show();
         }
 
-        private void ToolStripTextBox_Programm_Click(object sender, EventArgs e)
+        private void ToolStripTextBox_Programm_Click_BelykhDM(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
+            FormAbout_BelykhDM form4 = new FormAbout_BelykhDM();
             form4.Show();
         }
 
-        private void ToolStripTextBox2_Click(object sender, EventArgs e)
+        private void ToolStripTextBox2_Click_BelykhDM(object sender, EventArgs e)
         {
             Process process = new Process();
             process.StartInfo.FileName = "text.docx";
@@ -95,7 +95,7 @@ namespace Tyuiu.BelykhD.Task1.V0
 
         }
 
-        private void TextBox_SearchCar_TextChanged(object sender, EventArgs e)
+        private void TextBox_SearchCar_TextChanged_BelykhDM(object sender, EventArgs e)
         {
             var search = textBox_SearchCar.Text;
             dataGridView1_Table.ClearSelection();
@@ -114,7 +114,7 @@ namespace Tyuiu.BelykhD.Task1.V0
         }
 
         BindingSource bs = new BindingSource();
-        private void Button_Filter_Click(object sender, EventArgs e)
+        private void Button_Filter_Click_BelykhDM(object sender, EventArgs e)
         {
             try
             {
@@ -132,7 +132,7 @@ namespace Tyuiu.BelykhD.Task1.V0
             }
         }
 
-        private void Button_Clear_Click(object sender, EventArgs e)
+        private void Button_Clear_Click_BelykhDM(object sender, EventArgs e)
         {
             bs.RemoveFilter();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Tyuiu.BelykhD.Task1.V0
 {
-    public partial class Form4 : Form
+    public partial class FormAbout_BelykhDM : Form
     {
-        public Form4()
+        public FormAbout_BelykhDM()
         {
             InitializeComponent();
         }

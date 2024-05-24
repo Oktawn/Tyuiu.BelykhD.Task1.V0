@@ -1,6 +1,6 @@
 ﻿namespace Tyuiu.BelykhD.Task1.V0
 {
-    partial class Form3
+    partial class FormStats_BelykhDM
     {
         /// <summary>
         /// Required designer variable.

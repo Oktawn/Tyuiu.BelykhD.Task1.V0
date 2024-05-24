@@ -4,24 +4,24 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Tyuiu.BelykhD.Task1.V0
 {
-    public partial class Form3 : Form
+    public partial class FormStats_BelykhDM : Form
     {
         private DataGridView dataGridView1_Table;
 
-        public Form3()
+        public FormStats_BelykhDM()
         {
         }
 
-        public Form3(DataGridView dataGridView1_Table)
+        public FormStats_BelykhDM(DataGridView dataGridView1_Table)
         {
             InitializeComponent();
             this.dataGridView1_Table = dataGridView1_Table;
-            ShowRevenue();
-            ShowChart();
+            ShowRevenue_BelykhDM();
+            ShowChart_BelykhDM();
             
         }
 
-        private void ShowRevenue()
+        private void ShowRevenue_BelykhDM()
         {
             long sum = 0;
             long min = int.MaxValue;
@@ -45,7 +45,7 @@ namespace Tyuiu.BelykhD.Task1.V0
             textBox_count.Text=dataGridView1_Table.Rows.Count.ToString();
         }
 
-        private void ShowChart()
+        private void ShowChart_BelykhDM()
         {
 
             int col = 5;

@@ -18,12 +18,12 @@ namespace Tyuiu.BelykhD.Task1.V0
 
 
 
-        private void TextBox_Cost_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextBox_Cost_KeyPress_BelykhDM(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-        private void Button_CreateOrder_Click(object sender, EventArgs e)
+        private void Button_CreateOrder_Click_BelykhDM(object sender, EventArgs e)
         {
 
             int id = dt.Rows.Count + 1;

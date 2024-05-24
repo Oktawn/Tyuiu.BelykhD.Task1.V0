@@ -1,6 +1,6 @@
 ﻿namespace Tyuiu.BelykhD.Task1.V0
 {
-    partial class Form1
+    partial class FormMain_BelykhDM
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -66,7 +66,7 @@
             this.button_AddOrder.TabIndex = 1;
             this.button_AddOrder.Text = "Add order";
             this.button_AddOrder.UseVisualStyleBackColor = true;
-            this.button_AddOrder.Click += new System.EventHandler(this.Button_AddOrder_Click);
+            this.button_AddOrder.Click += new System.EventHandler(this.Button_AddOrder_Click_BelykhDM);
             // 
             // button_Stats
             // 
@@ -76,7 +76,7 @@
             this.button_Stats.TabIndex = 2;
             this.button_Stats.Text = "Stats";
             this.button_Stats.UseVisualStyleBackColor = true;
-            this.button_Stats.Click += new System.EventHandler(this.Button_Stats_Click);
+            this.button_Stats.Click += new System.EventHandler(this.Button_Stats_Click_BelykhDM);
             // 
             // menuStrip1
             // 
@@ -102,7 +102,7 @@
             this.toolStripTextBox_Programm.Name = "toolStripTextBox_Programm";
             this.toolStripTextBox_Programm.Size = new System.Drawing.Size(221, 22);
             this.toolStripTextBox_Programm.Text = "О программе";
-            this.toolStripTextBox_Programm.Click += new System.EventHandler(this.ToolStripTextBox_Programm_Click);
+            this.toolStripTextBox_Programm.Click += new System.EventHandler(this.ToolStripTextBox_Programm_Click_BelykhDM);
             // 
             // toolStripTextBox_guide
             // 
@@ -110,7 +110,7 @@
             this.toolStripTextBox_guide.Overflow = System.Windows.Forms.ToolStripItemOverflow.Always;
             this.toolStripTextBox_guide.Size = new System.Drawing.Size(221, 22);
             this.toolStripTextBox_guide.Text = "Руководтсво пользователя";
-            this.toolStripTextBox_guide.Click += new System.EventHandler(this.ToolStripTextBox2_Click);
+            this.toolStripTextBox_guide.Click += new System.EventHandler(this.ToolStripTextBox2_Click_BelykhDM);
             // 
             // label_SearchCar
             // 
@@ -127,7 +127,7 @@
             this.textBox_SearchCar.Name = "textBox_SearchCar";
             this.textBox_SearchCar.Size = new System.Drawing.Size(100, 20);
             this.textBox_SearchCar.TabIndex = 7;
-            this.textBox_SearchCar.TextChanged += new System.EventHandler(this.TextBox_SearchCar_TextChanged);
+            this.textBox_SearchCar.TextChanged += new System.EventHandler(this.TextBox_SearchCar_TextChanged_BelykhDM);
             // 
             // comboBox_Filter
             // 
@@ -156,7 +156,7 @@
             this.button_Filter.TabIndex = 11;
             this.button_Filter.Text = "Click";
             this.button_Filter.UseVisualStyleBackColor = true;
-            this.button_Filter.Click += new System.EventHandler(this.Button_Filter_Click);
+            this.button_Filter.Click += new System.EventHandler(this.Button_Filter_Click_BelykhDM);
             // 
             // button_Clear
             // 
@@ -166,7 +166,7 @@
             this.button_Clear.TabIndex = 12;
             this.button_Clear.Text = "Clear";
             this.button_Clear.UseVisualStyleBackColor = true;
-            this.button_Clear.Click += new System.EventHandler(this.Button_Clear_Click);
+            this.button_Clear.Click += new System.EventHandler(this.Button_Clear_Click_BelykhDM);
             // 
             // Form1
             // 
@@ -187,7 +187,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Main Menu";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing_BelykhDM);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_Table)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
